@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+body{
+    /* line-height: 1.6; */
+}
+p{
+    /* line-height:1.6; */
+    /* padding:0; */
+    /* margin:0; */
+}
+
+.txt28 {font-size: 28px;font-weight: 600;}
+@media screen and (max-width:560px){.txt28{ font-size:4.3vw; line-height:2;}}
+
+.txt24 { font-size: 24px; font-weight: 600; }
+
+.txt20 { font-size: 20px; font-weight: 600; }
+
+.txt19 { font-size: 19px; font-weight: 300; }
+
+.txt16 { font-size: 16px; font-weight: 600; }
+
+.txt14 { font-size: 14px; font-weight: 600; }
+
+.txt12 { font-size: 12px; font-weight: 300; }
+
+.yellowtxt { color: #ebb94d; }
+
+.whitetxt { color: #fff; }
+
+/*////////スマホで表示用<br class="sp">////////*/
+/*通常は非表示*/
+.sp { display: none!important; }
+/*768px以下で表示*/
+@media screen and (max-width:900px){.sp{ display:block!important;}}
+
+/*////////デスクトップで表示用<br class="pc">////////*/
+/*通常は表示*/
+.pc { display: block!important; }
+/*768px以下で非表示*/
+@media screen and (max-width:900px){.pc{ display:none!important;}}
+
+
+/*////////////////////////////////鍵括弧「」//////////////////////////////*/
+.all .txtbox{
+    width:860px;
+    max-width:calc(100% - 25px);
+    margin:0 auto;
+    position:relative;
+}
+.all .txtbox:before , .txtbox:after{/*共通*/
+    content:"";
+    position: absolute;
+    width:50px;
+    height:50px; 
+}
+.all .txtbox:before{
+    border-top:4px solid #EBB94C;
+    border-left:4px solid #EBB94C;
+    top:0;
+    left:0;
+}
+.all .txtbox:after{
+    border-bottom:4px solid #EBB94C;
+    border-right:4px solid #EBB94C;
+    bottom:0;
+    right:0;
+}
+.all .txtbox .txtl{/*txtboxに余白をつけると「」の微調整が手間*/
+    padding:30px 0;/*箇所によって、詳細度で上書き*/
+}
+
+@media screen and (max-width:560px){
+    .txtbox{
+        width:100%;
+    }
+    .all .txtbox:before , .txtbox:after{
+        width:25px;
+        height:25px;
+    }}
+/*////////////////////////////////ボタン///////////////////////////////*/
+.all .btn{
+    background-color: #da6b64;
+    text-align:center;/*左上にあったものが上中央にくる*/
+    cursor:pointer;
+}
+.all .btn a{
+    text-decoration:none;
+    color:#fff;
+    letter-spacing:0.1em;
+}
+.all .btn:hover{
+    opacity: 0.8;
+}
+/*////////////////////////////////circle///////////////////////////////*/
+.circle{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    line-height:80px;
+}
+@media only screen and (max-width: 1190px) and (min-width: 560px){
+header .btn .txt14 {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+header .btn{
+    padding:7.5px 38px;
+}}
+
+/* .content ::after, ::before{
+    box-sizing: initial;
+} */
